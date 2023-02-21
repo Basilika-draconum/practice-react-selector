@@ -1,16 +1,8 @@
+import { useSelector } from 'react-redux';
+import { selectIsDoneToDos } from 'redux/todo-selector';
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+  const toDosDone = useSelector(selectIsDoneToDos);
+  console.log(toDosDone);
+  return <div>React homework template</div>;
 };
